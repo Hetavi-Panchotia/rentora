@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="flex flex-col gap-6">
           <h3 className="text-xl font-bold">Explore</h3>
           <ul className="flex flex-col gap-4 text-gray-300">
-            <li><Link to="/properties" className="hover:text-brand-green transition-colors">Properties</Link></li>
+            <li><Link to="/explore" className="hover:text-brand-green transition-colors">Properties</Link></li>
             <li><Link to="/reviews" className="hover:text-brand-green transition-colors">Reviews</Link></li>
             <li><Link to="/neighborhoods" className="hover:text-brand-green transition-colors">Neighborhoods</Link></li>
             <li><Link to="/add-property" className="hover:text-brand-green transition-colors">Add Property</Link></li>

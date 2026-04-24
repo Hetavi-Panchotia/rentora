@@ -25,17 +25,17 @@ const Navbar = () => {
 
       {/* Right Side */}
       <div className="flex items-center gap-6">
-        <button className="flex items-center gap-2 text-text-main font-medium hover:opacity-80 transition-opacity">
+        <Link to="/login" className="flex items-center gap-2 text-text-main font-medium hover:opacity-80 transition-opacity">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
             <polyline points="10 17 15 12 10 7" />
             <line x1="15" y1="12" x2="3" y2="12" />
           </svg>
           Login
-        </button>
-        <button className="bg-brand-terracotta text-white px-6 py-2.5 rounded-xl font-semibold hover:shadow-lg transition-all active:scale-95">
+        </Link>
+        <Link to="/signup" className="bg-brand-terracotta text-white px-6 py-2.5 rounded-xl font-semibold hover:shadow-lg transition-all active:scale-95">
           Get Started
-        </button>
+        </Link>
       </div>
     </nav>
   );

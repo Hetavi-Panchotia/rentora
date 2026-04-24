@@ -1,24 +1,14 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Footer from './components/Footer'
 
-import Hero from './components/Hero'
-import FeaturedProperties from './components/FeaturedProperties'
-import HowItWorks from './components/HowItWorks'
-import TrustSection from './components/TrustSection'
-import FinalCTA from './components/FinalCTA'
-
-function Home() {
-  return (
-    <div className="flex flex-col">
-      <Hero />
-      <FeaturedProperties />
-      <HowItWorks />
-      <TrustSection />
-      <FinalCTA />
-    </div>
-  )
-}
+// Page Imports
+import Home from './pages/Home'
+import Explore from './pages/Explore'
+import Reviews from './pages/Reviews'
+import About from './pages/About'
+import PropertyDetails from './pages/PropertyDetails'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
 
 function App() {
   return (
@@ -27,9 +17,14 @@ function App() {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/property/:id" element={<PropertyDetails />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </main>
-      <Footer />
     </div>
   )
 }
