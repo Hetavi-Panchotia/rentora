@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FinalCTA = () => {
   return (
@@ -17,9 +18,9 @@ const FinalCTA = () => {
               Join Rentora today and discover rental properties with complete transparency and community-driven insights.
             </p>
             <div className="pt-4">
-              <button className="bg-brand-terracotta text-white px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all">
+              <Link to="/signup" className="bg-brand-terracotta text-white px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all inline-block">
                 Get Started Free
-              </button>
+              </Link>
             </div>
           </div>
         </div>

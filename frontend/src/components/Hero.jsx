@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -18,15 +19,15 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start pt-4">
-            <button className="bg-brand-terracotta text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 hover:shadow-xl hover:-translate-y-1 transition-all">
+            <Link to="/explore" className="bg-brand-terracotta text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 hover:shadow-xl hover:-translate-y-1 transition-all">
               Explore Properties
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
               </svg>
-            </button>
-            <button className="bg-white text-brand-green border-2 border-brand-green px-8 py-4 rounded-xl font-bold text-lg hover:bg-brand-green/5 transition-all">
+            </Link>
+            <Link to="/reviews" className="bg-white text-brand-green border-2 border-brand-green px-8 py-4 rounded-xl font-bold text-lg hover:bg-brand-green/5 transition-all text-center">
               Add Review
-            </button>
+            </Link>
           </div>
 
           {/* Search Bar Integration */}
