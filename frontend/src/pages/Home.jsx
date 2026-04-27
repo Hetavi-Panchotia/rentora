@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import FeaturedProperties from '../components/FeaturedProperties';
 import HowItWorks from '../components/HowItWorks';
@@ -9,6 +10,7 @@ import Footer from '../components/Footer';
 const Home = () => {
   return (
     <div className="flex flex-col">
+      <Navbar />
       <Hero />
       <FeaturedProperties />
       <HowItWorks />

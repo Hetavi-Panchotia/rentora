@@ -13,7 +13,6 @@ import Signup from './pages/Signup'
 function App() {
   return (
     <div className="min-h-screen flex flex-col bg-bg-off-white">
-      <Navbar />
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
