@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const PropertyCard = ({ image, title, price, location, rating, reviews, tags }) => {
+const PropertyCard = ({ _id, image, title, price, location, rating, reviews, tags }) => {
   return (
-    <div className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group cursor-pointer">
+    <Link to={`/property/${_id}`} className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group cursor-pointer block">
       {/* Image Container */}
       <div className="relative h-64 overflow-hidden">
         <img 
@@ -10,7 +11,7 @@ const PropertyCard = ({ image, title, price, location, rating, reviews, tags }) 
           alt={title} 
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
-        <button className="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 hover:text-red-500 hover:bg-white transition-all shadow-md">
+        <button className="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 hover:text-red-500 hover:bg-white transition-all shadow-md" onClick={(e) => e.preventDefault()}>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
           </svg>
@@ -45,7 +46,7 @@ const PropertyCard = ({ image, title, price, location, rating, reviews, tags }) 
           ))}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
