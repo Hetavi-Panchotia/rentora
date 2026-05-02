@@ -11,6 +11,9 @@ import PropertyDetails from './pages/PropertyDetails'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Dashboard from './pages/Dashboard'
+import MyReviews from './pages/MyReviews'
+import SavedProperties from './pages/SavedProperties'
+import ProfileSettings from './pages/ProfileSettings'
 import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
@@ -34,6 +37,21 @@ function App() {
           <Route path="/dashboard" element={
             <ProtectedRoute>
               <Dashboard />
+            </ProtectedRoute>
+          } />
+          <Route path="/my-reviews" element={
+            <ProtectedRoute>
+              <MyReviews />
+            </ProtectedRoute>
+          } />
+          <Route path="/saved-properties" element={
+            <ProtectedRoute>
+              <SavedProperties />
+            </ProtectedRoute>
+          } />
+          <Route path="/settings" element={
+            <ProtectedRoute>
+              <ProfileSettings />
             </ProtectedRoute>
           } />
           <Route path="/reviews" element={
