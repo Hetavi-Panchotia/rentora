@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import API_BASE_URL from '../api/config';
+import SEO from '../components/SEO';
 
 const PropertyDetails = () => {
   const { id } = useParams();
@@ -51,6 +52,11 @@ const PropertyDetails = () => {
 
   return (
     <>
+      <SEO 
+        title={property.title} 
+        description={property.description?.substring(0, 160)} 
+        image={property.images?.[0]}
+      />
       <div className="bg-bg-off-white min-h-screen">
         {/* Detail Header - Optimized for mobile */}
         <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">

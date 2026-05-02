@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const Landing = () => {
   return (
     <div className="flex flex-col bg-bg-off-white font-sans overflow-hidden">
+      <SEO 
+        title="Find Your Next Home with Confidence" 
+        description="Rentora connects you with authentic rental experiences, real neighbor reviews, and transparent property insights."
+      />
       {/* Top Logo Header - Adjusted for mobile */}
       <div className="absolute top-0 left-0 w-full p-6 md:p-8 lg:px-20 flex justify-between items-center z-50">
         <div className="flex items-center gap-2">

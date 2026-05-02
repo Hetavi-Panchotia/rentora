@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropertyCard from '../components/PropertyCard';
 import Footer from '../components/Footer';
 import API_BASE_URL from '../api/config';
+import SEO from '../components/SEO';
 
 const Explore = () => {
   const [properties, setProperties] = useState([]);
@@ -9,7 +10,6 @@ const Explore = () => {
   const [loading, setLoading] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // Filter States
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedQuickFilter, setSelectedQuickFilter] = useState('All');
   const [priceRange, setPriceRange] = useState(3400);
@@ -68,6 +68,11 @@ const Explore = () => {
 
   return (
     <div className="bg-white min-h-screen font-sans">
+      <SEO 
+        title="Explore Properties" 
+        description="Browse a wide range of properties, apartments, and houses. Use filters to find the perfect rental for your needs."
+        keywords="apartments, house rentals, rental search, property listings"
+      />
       {/* Search Bar Container - Responsive spacing */}
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-24 py-6 md:py-8 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="relative w-full md:flex-grow md:max-w-2xl order-2 md:order-1">

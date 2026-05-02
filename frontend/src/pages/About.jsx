@@ -1,9 +1,14 @@
 import React from 'react';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const About = () => {
   return (
     <div className="bg-[#fdfbf9] min-h-screen font-sans">
+      <SEO 
+        title="About Us" 
+        description="Learn more about Rentora, our mission to provide transparent rental experiences, and the team behind the platform."
+      />
       {/* Hero Section */}
       <section className="py-24 px-6 lg:px-20 bg-brand-forest relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-green/10 rounded-full blur-[120px]"></div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import API_BASE_URL from '../api/config';
+import SEO from '../components/SEO';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -44,6 +45,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen bg-bg-off-white flex flex-col items-center justify-center py-10 md:py-12 px-6">
+      <SEO title="Sign In" description="Sign in to your Rentora account to manage your property searches and reviews." />
       {/* Logo */}
       <div className="flex items-center gap-2 mb-6 md:mb-8">
         <div className="w-8 h-8 md:w-10 md:h-10 bg-brand-green rounded-full flex items-center justify-center shadow-lg shadow-brand-green/20">

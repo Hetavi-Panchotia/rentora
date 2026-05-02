@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const Reviews = () => {
   const [rating, setRating] = useState(0);
@@ -44,6 +45,10 @@ const Reviews = () => {
 
   return (
     <div className="min-h-screen bg-bg-off-white flex flex-col font-sans">
+      <SEO 
+        title="Share Your Experience" 
+        description="Write a review for your rental property. Share your experience with maintenance, management, and the neighborhood."
+      />
       
       <main className="flex-grow container mx-auto px-4 py-12 lg:py-16 max-w-6xl">
         {/* Header */}
